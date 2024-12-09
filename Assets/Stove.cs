@@ -9,7 +9,10 @@ public class Stove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cookedFoods[0].SetActive(false);
+        for (int i = 0; i < cookedFoods.Length; i++)
+        {
+            cookedFoods[i].SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -24,9 +27,18 @@ public class Stove : MonoBehaviour
         cookedFood = "burger";
     }
 
+    public void MakeSoda()
+    {
+        cookedFoods[1].SetActive(true);
+        cookedFood = "tomatoSoda";
+    }
+
     public void CleanStove()
     {
-        cookedFoods[0].SetActive(false);
+        for (int i = 0; i < cookedFoods.Length; i++)
+        {
+            cookedFoods[i].SetActive(false);
+        }
         cookedFood = "";
     }
 }
