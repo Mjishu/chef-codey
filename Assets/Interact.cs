@@ -53,17 +53,20 @@ public class Interact : MonoBehaviour
                 }
                 else
                 {
-                    if (stove.cookedFood == "burger")
+                    if (stove.hasCooked)
                     {
-                        print("food was cooked");
-                        PickUpItem(3, "burger");
-                        stove.CleanStove();
-                    }
-                    else if (stove.cookedFood == "tomatoSoda")
-                    {
-                        print("making soda");
-                        PickUpItem(4, "tomatoSoda");
-                        stove.CleanStove();
+                        if (stove.cookedFood == "burger")
+                        {
+                            print("food was cooked");
+                            PickUpItem(3, "burger");
+                            stove.CleanStove();
+                        }
+                        else if (stove.cookedFood == "tomatoSoda")
+                        {
+                            print("making soda");
+                            PickUpItem(4, "tomatoSoda");
+                            stove.CleanStove();
+                        }
                     }
                 }
 
